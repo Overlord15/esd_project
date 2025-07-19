@@ -4,6 +4,7 @@ import Dashboard from "../components/Dashboard";
 import Login from "../components/Login";
 import Calendar from "../components/Calendar"
 import Navbar from "../components/Navbar"
+import Taskboard from "../components/Taskboard"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/taskboard" element={<Taskboard />} />
       </Routes>
     </>
   );
