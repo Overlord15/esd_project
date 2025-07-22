@@ -62,7 +62,7 @@ const Calendar: React.FC = () => {
     });
     const [showModal, setShowModal] = useState(false);
     const [modalTask, setModalTask] = useState({ title: "", description: "" });
-    const [_loading, setLoading] = useState(false);
+    const [, setLoading] = useState(false);
 
     const daysArr = getMonthDays(current.year, current.month);
     const todayKey = toIndian(new Date()); // For grid/badge display
