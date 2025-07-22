@@ -74,14 +74,14 @@ const HeroSub = styled.p`
   max-width: 600px;
 `;
 
-const HeroImage = styled.img`
-  width: 700px;
-  max-width: 97vw;
-  margin-top: 3rem;
-  box-shadow: 0 5px 48px 0 #8474ed86;
-  border-radius: 22px;
-  background: #26135c80;
-`;
+// const HeroImage = styled.img`
+//   width: 700px;
+//   max-width: 97vw;
+//   margin-top: 3rem;
+//   box-shadow: 0 5px 48px 0 #8474ed86;
+//   border-radius: 22px;
+//   background: #26135c80;
+// `;
 
 // --- Visual Divider ---
 

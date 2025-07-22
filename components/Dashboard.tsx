@@ -24,11 +24,11 @@ const Dashboard: React.FC = () => {
     return () => unsubscribe();
   }, [navigate]);
 
-  const handleLogout = async () => {
-    await signOut(auth);
-    localStorage.clear();
-    navigate('/');
-  };
+  // const handleLogout = async () => {
+  //   await signOut(auth);
+  //   localStorage.clear();
+  //   navigate('/');
+  // };
 
   if (loading || !userData) {
     return <div>Loading...</div>;

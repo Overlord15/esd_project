@@ -28,23 +28,23 @@ const Wrapper = styled.div`
   }
 `;
 
-const NavBar = styled.nav`
-  width: 100%;
-  max-width: 1200px;
-  padding: 2rem 6vw 0 6vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-`;
+// const NavBar = styled.nav`
+//   width: 100%;
+//   max-width: 1200px;
+//   padding: 2rem 6vw 0 6vw;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   position: absolute;
+//   top: 0;
+// `;
 
-const Logo = styled.h1`
-  font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: -2px;
-  color: #ffffff;
-`;
+// const Logo = styled.h1`
+//   font-size: 2.2rem;
+//   font-weight: 700;
+//   letter-spacing: -2px;
+//   color: #ffffff;
+// `;
 
 const Card = styled.div`
   background: rgba(255, 255, 255, 0.1);
@@ -236,7 +236,7 @@ const Login: React.FC = () => {
         // Login
         const q = query(collection(db, "users"), where("screenName", "==", screenName));
         const snapshot = await getDocs(q);
-        if (snapshot.empty) throw new Error("No user found with this screen name.");
+        if (snapshot.empty) throw new globalThis.Error("No user found with this screen name.");
         const userData = snapshot.docs[0].data();
         const userCredential = await signInWithEmailAndPassword(
           auth,
