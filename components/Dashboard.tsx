@@ -95,17 +95,9 @@ const Dashboard: React.FC = () => {
                   <div className="col-md-4 d-grid">
                     <button
                       className="btn btn-warning"
-                      onClick={() => navigate('/tasks')}
+                      onClick={() => navigate('/taskmanager')}
                     >
                       Launch Tasks
-                    </button>
-                  </div>
-                  <div className="col-md-4 d-grid">
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => navigate('/whiteboard')}
-                    >
-                      Launch Whiteboard
                     </button>
                   </div>
                 </div>

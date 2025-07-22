@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { db } from "../firebase";
 import { collection, addDoc, getDocs } from "firebase/firestore";
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa";
 
 interface CalendarReminder {
     id: string;
@@ -121,15 +122,15 @@ const Calendar: React.FC = () => {
                     <div className="card shadow-sm">
                         <div className="card-body">
                             <div className="d-flex justify-content-between align-items-center mb-3">
-                                <button className="btn btn-outline-primary" onClick={() => setCurrent(c => ({
+                                <button className="btn" onClick={() => setCurrent(c => ({
                                     year: c.month - 1 >= 0 ? c.year : c.year - 1,
                                     month: c.month - 1 >= 0 ? c.month - 1 : 11,
-                                }))}><i className="bi bi-chevron-left"></i></button>
+                                }))}><FaChevronCircleLeft size={24} /></button>
                                 <h4 className="mb-0">{monthStr}</h4>
-                                <button className="btn btn-outline-primary" onClick={() => setCurrent(c => ({
+                                <button className="btn" onClick={() => setCurrent(c => ({
                                     year: c.month + 1 <= 11 ? c.year : c.year + 1,
                                     month: c.month + 1 <= 11 ? c.month + 1 : 0,
-                                }))}><i className="bi bi-chevron-right"></i></button>
+                                }))}><FaChevronCircleRight size={24} /></button>
                             </div>
                             <div className="table-responsive">
                                 <table className="table table-bordered calendar-table m-0" style={{ tableLayout: "fixed" }}>
